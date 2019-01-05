@@ -1,0 +1,17 @@
+{
+  "name": "two_sum",
+  "version": "1.0.0",
+  "description": "Given an array of integers, return indices of the two numbers such that they add up to a specific target.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./**/test*.js",
+    "testDbg": "mocha --inspect-brk ./**/test*.js"
+   
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
