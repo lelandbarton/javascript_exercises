@@ -1,7 +1,7 @@
 
 function parse(s) {
 	const buildNode = (op,l,r) => {op,l,r};
-	
+	/*
 	let state = 'START';
 	let stack = [];
 	let data = '';
@@ -11,7 +11,9 @@ function parse(s) {
 		if (/[0-9\\.]/.test(char)) {
 			
 		} else if (/[\+-/
+		}
 	}
+*/
 	
 	return "";
 }

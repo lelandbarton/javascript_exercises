@@ -2,8 +2,24 @@
 
 
 const findMedian = (xes, yes) => {
-  let x_i = Math.floor(xes.length/2);
-  let y_i = Math.floor(yes.length/2);
+  if (!xes) return null;
+  if (!yes) return null;
+
+  const totalLength = xes.length + yes.length;
+  let median = null;
+  let x_p = 0;
+  let y_p = 0;
+
+  while (median == null) {
+    if (
+    if (xes[x_p] <= yes[y_p]) {
+      xes += 1;
+    } else {
+      yes += 1;
+    }
+  }
+  
+
 
   
   return null;
