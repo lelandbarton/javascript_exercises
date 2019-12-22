@@ -11,7 +11,6 @@ const findMedian = (xes, yes) => {
   let y_p = 0;
 
   while (median == null) {
-    if (
     if (xes[x_p] <= yes[y_p]) {
       xes += 1;
     } else {
