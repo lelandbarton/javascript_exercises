@@ -27,13 +27,50 @@ Your solution should run in O(log n) time and O(1) space.
 
 module.exports =  (array) => {
 	const isExtraBelow = (idx, digit) => {
-		
+		if (idx === 0) throw new Error("idx is zero");
+
+		const firstEl = array[idx];
+		const secondEl = array[idx-1];
+
+		if (idx % 2 === 1) {
+			return firstEl === secondEl;
+		} else {
+			return firstEl !== secondel;
+		}
 	}
-	const r = (p, min, max) => {
+	const checkIfElIsSingle = idx => {
+
+		const firstEl = array[idx];
+		const aboveEl = idx < array.length - 1 ? array[idx+1] : null;
+		const belowEl = idx - 1 > 0 ? array[idx + 1] : null;
 		
+		if (firstEl === aboveEl || firstEl === belowEl) {
+			return true;
+		} else {
+			return false;
+		}
 	}
+
+
 
 	if (!array.length) return null;
 
+	let rangeMin = 0, rangeMax = array.length;
+	let singleEl = null;
+		
+	while (singleEl === null) {
+		let bisection = Math.floor((rangeMax - rangeMin)/2);
+		if (checkIfElIsSingle(bisection)) {
+			singleEl = array[idx];
+		}
+
+		let isBelow = isExtraBelow(bisection);
+		if (isBelow) {
+			rangeMax = bisection;
+		} else {
+			rangeMin = bisection
+		}
+	}
+	
 	return r(Math.floor(array.length/2), 0, array.length-1);
 }
